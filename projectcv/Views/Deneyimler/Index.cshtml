@@ -1,0 +1,37 @@
+﻿@model projectcv.Models.Sinif.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>BAŞLIK </th>
+            <th>ALT BAŞLIK </th>
+            <th>TARİH</th>
+            <th>DETAYLAR </th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.deger2)
+        {
+        <tr>
+            <th>@x.ID</th>
+            <td>@x.TITLE</td>
+            <td>@x.SUBTITLE</td>
+            <td>@x.DATE</td>
+            <td>@x.DETAILS</td>
+            <td><a href="/Deneyimler/DeneyimSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Deneyimler/DeneyimGetir/@x.ID" class="btn btn-success">GÜNCELLE</a></td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Deneyimler/YeniDeneyim/" class="btn btn-info">Yeni deneyim ekle</a>
+

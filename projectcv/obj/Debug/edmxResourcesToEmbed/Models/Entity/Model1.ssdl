@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbMvcCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLABOUT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SURNAME" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="100" />
+    <Property Name="PHONE" Type="varchar" MaxLength="20" />
+    <Property Name="MAİL" Type="varchar" MaxLength="50" />
+    <Property Name="ABOUT" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TBLAWARDS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AWARD" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBLEDUCATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="varchar" MaxLength="50" />
+    <Property Name="SUBTITLE" Type="varchar" MaxLength="50" />
+    <Property Name="DEPARTMENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPA" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLEXPERIENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="varchar" MaxLength="50" />
+    <Property Name="SUBTITLE" Type="varchar" MaxLength="50" />
+    <Property Name="DATE" Type="varchar" MaxLength="50" />
+    <Property Name="DETAILS" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TBLINTEREST">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INTEREST" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBLSKILLS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SKILL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DbMvcCvModelStoreContainer">
+    <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLAWARDS" EntityType="Self.TBLAWARDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLEDUCATION" EntityType="Self.TBLEDUCATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLEXPERIENCE" EntityType="Self.TBLEXPERIENCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLINTEREST" EntityType="Self.TBLINTEREST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLSKILLS" EntityType="Self.TBLSKILLS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

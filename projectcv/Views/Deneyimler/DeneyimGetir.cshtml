@@ -1,0 +1,28 @@
+﻿@model projectcv.Models.Entity.TBLEXPERIENCE
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle","Deneyimler",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.TITLE)
+        @Html.TextBoxFor(m => m.TITLE, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.SUBTITLE)
+        @Html.TextBoxFor(m => m.SUBTITLE, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.DATE)
+        @Html.TextBoxFor(m => m.DATE, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.DETAILS)
+        @Html.TextAreaFor(m => m.DETAILS, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Deneyim Güncelle</button>
+    </div>
+}
+
